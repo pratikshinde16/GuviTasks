@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    var json = [{
+    "employee_id" :"1204566", 
+    "name"   : "Rohan",
+    "department" : "Electrical",
+    "mail": "rohan16@gmail.com"
+},
+{
+    "employee_id" :"4502636", 
+    "name"   : "Amit",
+    "department" : "QA/QC",
+    "mail": "amit.mane@gmail.com"
+}];
+//for loop
+for(var i = 0; i < json.length; i++) {
+    var obj = json[i];
+
+    console.log(obj.employee_id);
+    console.log(obj.name);
+    console.log(obj.department);
+    console.log(obj.mail);
+
+}
+//for Each
+json.forEach(function(obj) { console.log(obj.mail); });
+
+//for In
+for (var key in json) {
+if (json.hasOwnProperty(key)) {
+  console.log(json[key].department);
+  
+ 
+}
+}
+//for Of
+// let text = "";
+// for (let x of json[key].employee_id) {
+//  text += x; 
+// }
+//  console.log(text);
+
+ for( let obj of json){
+  console.log(obj.name)  
+}
+
+
+
+</script>
+
+</body>
+</html>
