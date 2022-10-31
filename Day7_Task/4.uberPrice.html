@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Write a class to calculate the uber price -->
+    <!-- Discount -25%  to the user then what will be the price -->
+
+    <script>
+
+        class Uber{
+            constructor(km){
+                
+                this.km=km;
+                this.p=30*km;
+
+            }
+            getnewPrice(){
+               // console.log(`Price is :${this.p}`)
+                //var t=this.p
+                //return t
+                return `Price is : ${this.p}`
+            }
+            // getPrice(){
+            //     var price=30;
+            //     if(this.km==null){
+            //         return price;
+            //     }
+            //     else{
+            //         price=this.km*price;
+            //         return price;
+            //     }
+            // }
+           getapplyDiscount(){
+            var Discount=(25/this.p)*100;
+            //console.log(Discount)
+            var DiscountedPrice=this.p-Discount;
+            return `After discount price ${DiscountedPrice.toFixed(2)}`;
+           }
+        }
+
+        var u1=new Uber(2);
+        //console.log(u1.getPrice());
+        //u1.getnewPrice()
+
+        console.log(u1.getnewPrice())
+        u1.getapplyDiscount();
+        console.log(u1.getapplyDiscount())
+
+    </script>
+    
+</body>
+</html>
